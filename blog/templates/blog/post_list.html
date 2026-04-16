@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--metadata aka links to other files or css stuff... title of the page etc...-->>
+
+    <title>Django Blog</title>
+</head>
+
+<body>
+
+    <hearder>
+         <h1><a href="/">Django Girls Blog</a></h1>
+    </hearder>
+
+   {% for post in posts %}
+        <article>
+            <h2><a href="">{{ post.title }}</a></h2>
+            <p>{{ post.text|linebreaksbr }}</p>
+            <time>{{ post.published_date }}</time>
+         </article>
+    {% endfor %}
+
+</body>
+</html>
