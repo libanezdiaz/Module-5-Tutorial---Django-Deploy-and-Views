@@ -16,8 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+#grap th built in views for logging in out application
+from django.contrib.auth import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('account/login', views.LoginView.as_view(), name='login'),
     path('', include('blog.urls')),
 ]
